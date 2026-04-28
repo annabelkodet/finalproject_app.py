@@ -2,7 +2,7 @@ import yfinance as yf
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-
+import streamlit as st
 
 stock = "AAPL"
 data = yf.download(stock, period="6mo")
