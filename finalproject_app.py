@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import streamlit as st
+pip install streamlit
 
 stock = "AAPL"
 data = yf.download(stock, period="6mo")
