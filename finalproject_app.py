@@ -17,6 +17,12 @@ current_price = data['Close'].iloc[-1]
 ma20 = data['MA20'].iloc[-1]
 ma50 = data['MA50'].iloc[-1]
 
+if data.empty:
+    st.error("No data returned. Check ticker or date range.")
+else:
+    latest_price = data["Close"].iloc[-1]
+    st.write(latest_price)
+
 if current_price.item() > ma20 > ma50:
     trend = "Strong Uptrend"
 elif current_price.item() < ma20 < ma50:
